@@ -1,0 +1,32 @@
+{
+  "name": "3dtilesdownloader",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/3dtilesdownloader.js",
+  "bin": {
+    "3dtilesdownloader": "bin/3dtilesdownloader"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "3dtiles",
+    "download",
+    "downloader"
+  ],
+  "engines": {
+    "node": ">=6"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "preferGlobal": true,
+  "author": "wangminghua",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "commander": "^8.0.0",
+    "lodash": "^4.17.21"
+  }
+}

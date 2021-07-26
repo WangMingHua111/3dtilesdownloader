@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const path = require('path')
+const program = require('commander');
+
+program
+    .version('0.0.1')
+    .option('-o, --outdir <path>', 'change the output directory')
+    .option('-a, --alias <name>', 'change the output directory alias,defalut is "3dtiles"')
+    .option('-q, --query <param...>', 'query string')
+    .option('-b, --breakpoint', 'breakpoint continuingly')
+    .option('-p, --parallel', 'parallel downloads')
+    .option('-c, --count <value>', 'parallel downloads max count')
+
+program.parse(process.argv)
+const downloader = require('../lib/3dtilesdownloader.js').defalut
+if (program.args.length > 0) {
+    downloader(program.args[0], program.opts())
+} else {
+    throw new Error('3dtiles.json url not exist')
+}
