@@ -1,30 +1,26 @@
-# clt2tiles
-将Cesuim实验室定义的clt文件提取为3dtiles目录
+# 3dtilesdownloader
+通过 3dtiles文件网络路径，下载模型切片文件到本地
 
 # install
 
-  npm install -g clt2tiles
+  npm install -g 3dtilesdownloader
   
 # use
 
+  3dtilesdownloader "http://192.168.10.201/3dtiles/tileset.json" // 下载tileset.json
   
+  3dtilesdownloader "http://192.168.10.201/3dtiles/tileset.json" -outdir temp // 下载文件，并输出到 temp/3dtiles 目录下
   
-  clt2tiles 3dtiles.clt // 提取clt文件
+  3dtilesdownloader "http://192.168.10.201/3dtiles/tileset.json" --alias tiles // 下载文件，并输出到 tiles 目录下 
   
-  clt2tiles 3dtiles.clt -outdir temp // 提取clt文件，并输出到3dtiles.clt目录的 temp/3dtiles 目录下
+  3dtilesdownloader "http://192.168.10.201/3dtiles/tileset.json" -outdir temp --alias tiles // 下载文件，并输出到 temp/tiles 目录下 
   
-  clt2tiles 3dtiles.clt --alias tiles // 提取clt文件，并输出到3dtiles.clt目录的 tiles 目录下 
+  3dtilesdownloader "http://192.168.10.201/3dtiles/tileset.json" --breakpoint // 断点续传，避免重复下载
   
-  clt2tiles 3dtiles.clt -outdir temp --alias tiles // 提取clt文件，并输出到3dtiles.clt目录的 temp/tiles 目录下 
+  3dtilesdownloader "http://192.168.10.201/3dtiles/tileset.json" --parallel // 并行下载
   
-  clt2tiles 3dtiles.clt --zip // 提取clt文件，并使用zip解压
+  3dtilesdownloader "http://192.168.10.201/3dtiles/tileset.json" --parallel --count // 并行下载数量
 
 # 操作选项
 
-- 使用 clt2tiles -h 查看帮助
-
-  -a, --alias <name> 输出文件夹别名
-  
-  -o, --outdir <path> 输出文件夹目录
-  
-  -z, --zip 如果clt存储的文件是使用zip压缩过的，请使用此命令解压
+- 使用 3dtilesdownloader -h 查看帮助
