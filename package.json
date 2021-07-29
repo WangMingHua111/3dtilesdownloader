@@ -1,6 +1,6 @@
 {
   "name": "3dtilesdownloader",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "lib/3dtilesdownloader.js",
   "bin": {
@@ -26,7 +26,11 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
+    "axios-retry": "^3.1.9",
+    "clt2tiles": "^0.0.1",
     "commander": "^8.0.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "sqlite3": "^5.0.2",
+    "tiny-async-pool": "^1.2.0"
   }
 }
