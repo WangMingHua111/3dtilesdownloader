@@ -18,7 +18,8 @@
   // 使用并行、断点续传、内容压缩的方式下载tileset.json成clt，并在下载完毕后自动解压
 
   3dtilesdownloader "http://192.168.10.201/3dtiles/tileset.json" -b -z -p -c 20 -l 100 --no-clt
-
+  
+**并行下载的功能已经趋于稳定，建议使用并行下载，同时建议开启zip压缩和断点续传的功能，减少打包后需要迁移的数据量 --zip --breakpoint**
 
 
 # 操作选项
