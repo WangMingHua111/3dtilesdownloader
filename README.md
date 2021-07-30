@@ -34,6 +34,9 @@
     .option('-p, --parallel', 'parallel')
     .option('-c, --count <value>', 'parallel count defalut 20')
     .option('-l, --limit <value>', 'parallel page limit count defalut 100')
+    .option('-m, --multiple', 'parallel multiple processes')
+    .option('-w, --work <value>', 'parallel multiple processes count defalut 8')
+    .option('--cltname <value>', 'parallel multiple processes cltname')
     .option('--no-clt', 'unpack clt')
 
     --outdir 指定输出目录
@@ -45,3 +48,5 @@
     --count 并行下载时瞬时最大请求数量，默认值 20
     --limit 并行下载时，从并行缓存中读取的记录数量，默认值 100
     --no-clt 默认下载格式为Cesuimlab 定义的 clt 格式，启用该选项后，将会在clt下载完毕后，自动解包为文件目录
+    --multiple 开启多进程模式，仅能在并行下载模式下使用，且通过所有文件预处理完毕后才会开启子进程（当前没有详细测试，但一般情况下使用没有问题，另外此模式下将不会自动进行解包，且生成主要clt和其余部分的clt，不能够删除部分文件）
+    --work 开启多进程模式下的工作进程数量
