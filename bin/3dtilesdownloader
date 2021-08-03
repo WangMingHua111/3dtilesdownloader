@@ -11,7 +11,6 @@ program
     .option('-q, --query <param...>', 'query string')
     .option('-b, --breakpoint', 'breakpoint continuingly')
     .option('-z, --zip', 'zip compression')
-    .option('-p, --parallel', 'parallel')
     .option('-c, --count <value>', 'parallel count defalut 20')
     .option('-l, --limit <value>', 'parallel page limit count defalut 100')
     .option('--no-clt', 'unpack clt')
